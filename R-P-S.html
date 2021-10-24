@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Game</title>
+</head>
+<body>
+    <script>
+        let compDict = ["Rock", "Paper", "Scissors"];
+        let playDict = {"Rock": 0, "Paper": 1, "Scissors": 2};
+
+        let decider = [
+            ["Tie", "Player wins", "Computer wins"], 
+            ["Computer wins", "Tie", "Player wins"], 
+        ["Player wins", "Computer wins", "Tie"]];
+
+        let compCount = 0;
+        let playCount = 0;
+        let result;
+
+        let playPick = window.prompt();
+        let compPick = generateRanNum(3); 
+            
+        console.log(`Computer's pick: ${compDict[compPick]}`);
+        console.log(`Player's pick: ${playPick}`);
+
+        result = decider[compPick][playDict[playPick]];
+
+        console.log(result);
+
+        if (result == "Player wins")
+        {
+            playCount++;
+        }
+        else if (result == "Computer wins")
+        {
+            compCount++;
+        }
+        console.log(`Player's count: ${playCount}`);
+        console.log(`Computer's count: ${compCount}`);
+    
+
+        function generateRanNum (max)
+        {
+            return Math.floor(Math.random() *max)
+        }
+    </script>
+</body>
+</html>
