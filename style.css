@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+div {
+    padding: 10px;
+    flex: 1;
+    /*border: 2px solid red;*/
+}
+.result {
+    display: flex;
+    flex-direction: column;
+}
+.round, .whowins {
+    display: flex;
+    justify-content: center;
+}
+.picks {
+    display: flex;
+}
+.compPick, .playerPick, .compScore, .playerScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    background-color: #475fe9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
