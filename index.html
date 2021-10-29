@@ -5,47 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js-file.js" defer></script>
 </head>
 <body>
-    <script>
-        let compDict = ["Rock", "Paper", "Scissors"];
-        let playDict = {"Rock": 0, "Paper": 1, "Scissors": 2};
-
-        let decider = [
-            ["Tie", "Player wins", "Computer wins"], 
-            ["Computer wins", "Tie", "Player wins"], 
-        ["Player wins", "Computer wins", "Tie"]];
-
-        let compCount = 0;
-        let playCount = 0;
-        let result;
-
-        let playPick = window.prompt();
-        let compPick = generateRanNum(3); 
-            
-        console.log(`Computer's pick: ${compDict[compPick]}`);
-        console.log(`Player's pick: ${playPick}`);
-
-        result = decider[compPick][playDict[playPick]];
-
-        console.log(result);
-
-        if (result == "Player wins")
-        {
-            playCount++;
-        }
-        else if (result == "Computer wins")
-        {
-            compCount++;
-        }
-        console.log(`Player's count: ${playCount}`);
-        console.log(`Computer's count: ${compCount}`);
-    
-
-        function generateRanNum (max)
-        {
-            return Math.floor(Math.random() *max)
-        }
-    </script>
+    <div class="result">
+        <div class="round">Round: 0</div>
+        <div class="whowins">No winner yet</div>
+    </div>
+    <div class="picks">
+        <div class="left">
+            <div class="compPick">
+                Computer: 
+            </div>  
+            <div class="compScore">
+                Score: 
+            </div>  
+        </div>
+        <div class="right">
+            <div class="playerPick">
+                Player:
+            </div>
+            <div class="playerScore">
+                Score:
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="buttons">
+            <button id="Rock">Rock</button>
+            <button id="Paper">Paper</button>
+            <button id="Scissors">Scissors</button>
+        </div>
+    </div>
 </body>
 </html>
